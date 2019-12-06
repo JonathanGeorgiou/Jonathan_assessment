@@ -44,15 +44,24 @@ public class Game {
 	}
 
 	public void compass() {
+		double distanceToGoal = Math.hypot((player1.getXPosition() - goal.getxVal()),
+				(player1.getYPosition() - goal.getyVal()));
+		double distanceToTroll = Math.hypot((player1.getXPosition() - troll.getxVal()),
+				(player1.getYPosition() - troll.getyVal()));
 
-		double distance = Math.hypot((player1.getXPosition() - goal.getxVal()),
-				(player1.getYPosition() - goal.getxVal()));
-		System.out.println(text.getDistance() + distance + "m away.");
-		while (distance >= 1.0) {
+		if (distanceToGoal < distanceToTroll) {
+			System.out.println(text.getGoalDistance() + distanceToGoal + "m away.");
+		} else {
+			System.out.println(text.getTrollDistance() + distanceToTroll + "m away");
+		}
+
+		while (distanceToGoal >= 1.0 && distanceToTroll >= 1.0) {
 			this.move();
 		}
-		if (distance < 1.0) {
+		if (distanceToGoal < 1.0) {
 			System.out.println(text.getEnd());
+		} else if (distanceToTroll < 1.0) {
+			System.out.println(text.getGotcha());
 		}
 
 	}
