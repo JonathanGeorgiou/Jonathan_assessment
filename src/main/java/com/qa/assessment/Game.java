@@ -52,7 +52,7 @@ public class Game {
 		if (distanceToGoal < distanceToTroll) {
 			System.out.println(text.getGoalDistance() + distanceToGoal + "m away.");
 		} else {
-			System.out.println(text.getTrollDistance() + distanceToTroll + "m away");
+			System.out.println(text.getTrollDistance() + distanceToTroll + "m away!!");
 		}
 
 		while (distanceToGoal >= 1.0 && distanceToTroll >= 1.0) {

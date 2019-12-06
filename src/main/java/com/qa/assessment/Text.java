@@ -2,12 +2,12 @@ package com.qa.assessment;
 
 public class Text {
 
-	private String intro = "Wlecome to a dark dark land in a dark dark place play the game and ......";
-	private String distanceToGoal = "I think you are close to something intriguing...";
-	private String distanceToTroll = "WARNING! Do not proceed in this direction! Something dangerous ";
-	private String pick = "Do you go north (n), south (s), east (e), or west(w)... ";
+	private String intro = "Welcome to Troll Swamp, a land full of treasure! ...and peril. Which will you find today? ";
+	private String distanceToGoal = "I think you are close to something intriguing... ";
+	private String distanceToTroll = "WARNING! Do not proceed in this direction! Something dangerous is only ";
+	private String pick = "Do you go north (n), south (s), east (e), or west (w)... ";
 	private String end = "Congratulations! You have found the treasure... let's hope it's not cursed.";
-	private String gotcha = "Oh no! You have been devoured by the Troll!!! GAME OVER.";
+	private String gotcha = "Oh no! You have been devoured by the Troll!!! AHHH!! GAME OVER. ";
 
 	public String getIntro() {
 		return intro;
